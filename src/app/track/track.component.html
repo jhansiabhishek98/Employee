@@ -1,0 +1,14 @@
+<ngContainer *ngFor="let item of collection">
+<div class='tile'>
+    <img class='tile-img' style="background-image: url(https://static.pexels.com/photos/9050/pexels-photo.jpg);"/>
+    <div class='tile-info'>
+      <h1>Task Id- {{item.taskId}}</h1>
+      <p>Status Task Completed-<p *ngIf="item.statusTaskCompleted==true"></p><i class="fas fa-check-circle"></i></p>
+      <p>Status Task Completed-<p *ngIf="item.statusTaskCompleted==false"></p><i class="fas fa-times-circle"></i></p>
+      <p>Status Task Completed-<p *ngIf="item.statusTaskReady==true"></p><i class="fas fa-check-circle"></i></p>
+      <p>Status Task Completed-<p *ngIf="item.statusTaskReady==false"></p><i class="fas fa-times-circle"></i></p>
+       <p>If you ready please update your status</p>
+      <button>Edit</button>
+    </div>
+  </div>
+</ngContainer>
